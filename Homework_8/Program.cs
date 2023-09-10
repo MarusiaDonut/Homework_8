@@ -53,13 +53,13 @@
             }
             while (name != "");
 
-            node.Sort(root);
+            node.PrintSort(root);
 
             Console.WriteLine("Какой размер зарплаты вас интересует?");
             while (true)
             {
                 int salaryFind = 0;
-                if (Int32.TryParse(Console.ReadLine(), out salaryFind))
+                if (int.TryParse(Console.ReadLine(), out salaryFind))
                 {
                     if (salaryFind == 0)
                     {
@@ -69,6 +69,10 @@
                     if (node == null)
                     {
                         Console.WriteLine("Такого сотрудника не существует.");
+                    }
+                    else if (n == null)
+                    {
+                        Console.WriteLine("Такой зарплаты не существует.");
                     }
                     else
                     {

@@ -62,17 +62,17 @@ namespace Homework_8
             return root;
         }
 
-        public void Sort(Node originiNode)
+        public void PrintSort(Node originiNode)
         {
 
             if (originiNode.Left != null)
             {
-                Sort(originiNode.Left);
+                PrintSort(originiNode.Left);
             }
             Console.WriteLine("Имя сотрудника - " + originiNode.Name + ", зарплата - " + originiNode.Salary);
             if (originiNode.Right != null)
             {
-                Sort(originiNode.Right);
+                PrintSort(originiNode.Right);
             }
         }
     }
